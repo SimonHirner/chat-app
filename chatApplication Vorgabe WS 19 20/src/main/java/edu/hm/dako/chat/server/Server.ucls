@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="edu.hm.dako.chat.server.ServerFactory" project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/ServerFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="683" x="816" y="-51"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="edu.hm.dako.chat.server.ServerStartData" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/ServerStartData.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="145" x="4216" y="-51"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="edu.hm.dako.chat.server.AdvancedChatServerImpl" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/AdvancedChatServerImpl.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="466" x="99" y="-51"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="edu.hm.dako.chat.server.SharedChatClientList" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/SharedChatClientList.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="585" width="302" x="2126" y="-51"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="edu.hm.dako.chat.server.AbstractChatServer" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/AbstractChatServer.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="140" x="2021" y="-1396"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="edu.hm.dako.chat.server.SimpleChatServerImpl" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/SimpleChatServerImpl.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="547" x="1539" y="-51"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="edu.hm.dako.chat.server.SharedServerCounter" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/SharedServerCounter.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="171" x="605" y="-51"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="8" language="java" name="edu.hm.dako.chat.server.ChatServerInterface" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/ChatServerInterface.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="139" x="3789" y="-51"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="9" language="java" name="edu.hm.dako.chat.server.ChatServerGuiInterface" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/ChatServerGuiInterface.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="208" x="3968" y="-51"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="10" language="java" name="edu.hm.dako.chat.server.AbstractWorkerThread" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/AbstractWorkerThread.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="527" x="2937" y="-1396"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="edu.hm.dako.chat.server.AuditLogConnection" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/AuditLogConnection.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="387" width="290" x="1539" y="584"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="edu.hm.dako.chat.server.ServerFactory.DecoratingServerSocket" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/ServerFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="261" x="816" y="584"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="edu.hm.dako.chat.server.AdvancedChatWorkerThreadImpl" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/AdvancedChatWorkerThreadImpl.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="575" x="3174" y="-51"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="edu.hm.dako.chat.server.ChatServerGUI" project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/ChatServerGUI.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="1305" width="391" x="3968" y="-1396"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="edu.hm.dako.chat.server.SimpleChatWorkerThreadImpl" 
+    project="chatApplication Vorgabe WS 19 20" 
+    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/server/SimpleChatWorkerThreadImpl.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="656" x="2478" y="-51"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="16">    
+    <end type="SOURCE" refId="5" navigable="false" variant="ASSOCIATION">      
+      <attribute id="17" name="counter"/>      
+      <multiplicity id="18" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true" variant="ASSOCIATION"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="19">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <nesting id="20">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="12"/>  
+  </nesting>  
+  <generalization id="21">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="22">    
+    <end type="SOURCE" refId="5" navigable="false" variant="ASSOCIATION">      
+      <attribute id="23" name="clients"/>      
+      <multiplicity id="24" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true" variant="ASSOCIATION"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="25">    
+    <end type="SOURCE" refId="14" navigable="false" variant="ASSOCIATION">      
+      <attribute id="26" name="chatServer"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true" variant="ASSOCIATION"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="28">    
+    <end type="SOURCE" refId="10" navigable="false" variant="ASSOCIATION">      
+      <attribute id="29" name="serverGuiInterface"/>      
+      <multiplicity id="30" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true" variant="ASSOCIATION"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="31">    
+    <end type="SOURCE" refId="1" navigable="false" variant="ASSOCIATION">      
+      <attribute id="32" name="auditLogConnection"/>      
+      <multiplicity id="33" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true" variant="ASSOCIATION"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="34">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <association id="35">    
+    <end type="SOURCE" refId="10" navigable="false" variant="ASSOCIATION">      
+      <attribute id="36" name="clients"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true" variant="ASSOCIATION"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="38">    
+    <end type="SOURCE" refId="14" navigable="false" variant="ASSOCIATION">      
+      <attribute id="39" name="server"/>      
+      <multiplicity id="40" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true" variant="ASSOCIATION"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="41">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="42">    
+    <end type="SOURCE" refId="15" navigable="false" variant="ASSOCIATION">      
+      <attribute id="43" name="auditLogConnection"/>      
+      <multiplicity id="44" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true" variant="ASSOCIATION"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="45">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <association id="46">    
+    <end type="SOURCE" refId="14" navigable="false" variant="ASSOCIATION">      
+      <attribute id="47" name="data"/>      
+      <multiplicity id="48" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true" variant="ASSOCIATION"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="49">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="50">    
+    <end type="SOURCE" refId="4" navigable="false" variant="ASSOCIATION">      
+      <attribute id="51" name="instance"/>      
+      <multiplicity id="52" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true" variant="ASSOCIATION"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="53">    
+    <end type="SOURCE" refId="6" navigable="false" variant="ASSOCIATION">      
+      <attribute id="54" name="auditLogConnection"/>      
+      <multiplicity id="55" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true" variant="ASSOCIATION"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="56">    
+    <end type="SOURCE" refId="5" navigable="false" variant="ASSOCIATION">      
+      <attribute id="57" name="serverGuiInterface"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true" variant="ASSOCIATION"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
