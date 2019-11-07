@@ -2,14 +2,15 @@ package edu.hm.dako.chat.AuditLogServer;
 
 import edu.hm.dako.chat.common.AuditLogPDU;
 
-//Zusätzliche Imports
+//Zusï¿½tzliche Imports
 import edu.hm.dako.chat.connection.EndOfFileException;
 import edu.hm.dako.chat.tcp.TcpConnection;
 import edu.hm.dako.chat.tcp.TcpServerSocket;
 
-//Zusätzliche Imports für FileWriter
+//Zusï¿½tzliche Imports fï¿½r FileWriter
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -33,11 +34,24 @@ public class AuditLogTcpServer {
 	static final int DEFAULT_RECEIVEBUFFER_SIZE = 800000;
 
 	// Name der AuditLog-Datei
-	static final String auditLogFile = new String("ChatAuditLog.dat");
+	static final String auditLogFile = new String("ChatAuditLog.txt");
 
 	// Zaehler fuer ankommende AuditLog-PDUs
-	protected long counter = 0;
-
+	static long counterAuditlog = 0;	
+	
+	// alle Benutzernamen
+	static ArrayList<String> userNames = new ArrayList<>();
+	
+	//Zaehler AuditLogType Login
+	static int counterLogin = 0;
+	
+	//Zaehler AuditLogType Logout
+	static int counterLogout = 0;
+	
+	//Zaehler AuditLogType Chat
+	static int counterChat = 0;
+	
+	
 	public static void main(String[] args) {
 
 		PropertyConfigurator.configureAndWatch("log4j.auditLogServer_tcp.properties", 60 * 1000);
@@ -47,13 +61,13 @@ public class AuditLogTcpServer {
 		//TODO: Implementierung des AuditLogServers auf TCP-Basis hier ergaenzen
 		
 		try {
-			//Server Socket für AuditLogServer erzeugen
+			//Server Socket fï¿½r AuditLogServer erzeugen
 			TcpServerSocket auditLogServerSocket = new TcpServerSocket(AUDIT_LOG_SERVER_PORT, DEFAULT_SENDBUFFER_SIZE, DEFAULT_RECEIVEBUFFER_SIZE);
 			//Verbindung mit ChatServer erzeugen und aufbauen
 			TcpConnection auditLogServerConnection = (TcpConnection) auditLogServerSocket.accept();
 			
 			//FileWriter erzeugen	
-            FileWriter fileWriter = new FileWriter("ChatAuditLog.dat");
+            FileWriter fileWriter = new FileWriter("ChatAuditLog.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             //Kopf von AuditLogFile erstellen
@@ -66,6 +80,22 @@ public class AuditLogTcpServer {
             	do {
             		receivedAuditLogPDU = (AuditLogPDU) auditLogServerConnection.receive(100000);
             		bufferedWriter.write(receivedAuditLogPDU.toString());
+            		counterAuditlog++;
+            		
+            		//wenn sich der Benutzername noch nicht in der Liste befindet, wird dieser hinzugefï¿½gt
+            		if(!userNames.contains(receivedAuditLogPDU.getUserName())) {
+            			userNames.add(receivedAuditLogPDU.getUserName());
+            		}
+            		  
+            		//je nachdem welcher AuditLogTyp vorliegt wird der entsprechende Zaehler hochgezaehlt
+            		if(receivedAuditLogPDU.getPduType().toString() == "Login ") {
+            			counterLogin++;
+            		} else if(receivedAuditLogPDU.getPduType().toString() == "Logout") {
+            			counterLogout++;
+            		} else if(receivedAuditLogPDU.getPduType().toString() == "Chat  ") {
+            			counterChat++;
+            		}
+            		
             	} while (receivedAuditLogPDU != null);
             } catch (EndOfFileException e) {
             	//Ordnungsgemaesses Beenden wegen Verbindungsabruch
@@ -74,7 +104,7 @@ public class AuditLogTcpServer {
     			auditLogServerSocket.close();
             }
             
-            //Ordnungsgemäßes Beenden wegen Timeout
+            //Ordnungsgemï¿½ï¿½es Beenden wegen Timeout
 			bufferedWriter.close();
 			auditLogServerConnection.close();
 			auditLogServerSocket.close();
@@ -83,6 +113,9 @@ public class AuditLogTcpServer {
 			//Andere Exceptions behandeln
 			System.out.println("Schwerwiegender Fehler!");
 		}
+		
+		// oeffnet das Informationsfenster
+		new AdministrationGuiForTcp();
 		
 	}
 }
