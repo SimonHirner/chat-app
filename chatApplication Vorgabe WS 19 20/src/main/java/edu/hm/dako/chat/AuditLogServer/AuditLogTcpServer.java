@@ -68,7 +68,13 @@ public class AuditLogTcpServer {
             	while (!auditLogServerSocket.isClosed()) {
             		receivedAuditLogPDU = (AuditLogPDU) auditLogServerConnection.receive(CONNECTION_WAITING_TIME);
             		bufferedWriter.write(receivedAuditLogPDU.toString());
-            }
+            	}
+            	
+            	// Ordnungsgemaesses beenden
+     			bufferedWriter.close();
+     			auditLogServerConnection.close();
+     			auditLogServerSocket.close();
+     			System.out.println("Verbindungsabbruch - AuditLogServer ordnungsgemaess beendet");	
             
             } catch (ConnectionTimeoutException connectionTimeoutException) {
             	//Beenden wegen Timeout
@@ -84,12 +90,6 @@ public class AuditLogTcpServer {
     			System.out.println("Verbindungsabbruch - AuditLogServer ordnungsgemaess beendet");
             }
             
-            // Ordnungsgemaesses beenden
- 			bufferedWriter.close();
- 			auditLogServerConnection.close();
- 			auditLogServerSocket.close();
- 			System.out.println("Verbindungsabbruch - AuditLogServer ordnungsgemaess beendet");
-			
 		} catch (Exception exception) {
 			// Andere Fehler
 			System.out.println("Schwerwiegender Fehler");
