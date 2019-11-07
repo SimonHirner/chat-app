@@ -33,7 +33,7 @@ public class AuditLogUdpServer {
 	protected long counter = 0;
 	
 	// Maximale Wartezeit (ms) auf Nachricht vom ChatServer
-	static final int CONNECTION_WAITING_TIME = 100000;
+	static final int CONNECTION_WAITING_TIME = 50000;
 
 	public static void main(String[] args) {
 		PropertyConfigurator.configureAndWatch("log4j.auditLogServer_udp.properties", 60 * 1000);
