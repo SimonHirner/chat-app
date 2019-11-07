@@ -63,30 +63,21 @@ public class AuditLogUdpServer {
             		bufferedWriter.write(receivedAuditLogPDU.toString());
             	}
             
-            	// Ordnungsgemaesses beenden
-        		bufferedWriter.close();
-        		auditLogServerConnection.close();
-        		auditLogServerSocket.close();
-        		System.out.println("Verbindungsabbruch - AuditLogServer ordnungsgemaess beendet");
-            	
             } catch (ConnectionTimeoutException connectionTimeoutException) {
-            	//Beenden wegen Connection Timeout
-    			bufferedWriter.close();
-    			auditLogServerConnection.close();
-    			auditLogServerSocket.close();
-    			System.out.println("Timeout - AuditLogServer ordnungsgemaess beendet");
+            	//Connection Timeout
+    			System.out.println("Connection Timeout");
             } catch (EndOfFileException endOfFileException) {
-            	//Beenden wegen Verbindungsabbruch
-    			bufferedWriter.close();
-    			auditLogServerConnection.close();
-    			auditLogServerSocket.close();
-    			System.out.println("Verbindungsabbruch - AuditLogServer ordnungsgemaess beendet");
+            	//Verbindungsabbruch
+    			System.out.println("Verbindungsabbruch");
             } catch (SocketTimeoutException socketTimeoutException) {
-            	//Beenden wegen Socket Timeout
+            	//Socket Timeout
+    			System.out.println("Socket Timeout");
+            } finally {
+            	// Ordnungsgemaesses beenden
     			bufferedWriter.close();
     			auditLogServerConnection.close();
     			auditLogServerSocket.close();
-    			System.out.println("Timeout - AuditLogServer ordnungsgemaess beendet");
+    			System.out.println("AuditLogServer ordnungsgemaess beendet");
             }
 			
 		} catch (Exception exception) {
