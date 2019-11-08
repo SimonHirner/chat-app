@@ -15,19 +15,20 @@ import java.io.IOException;
 
 public class Administration {
 	
-	private static void ladeDatei(String fileName) {	
-		// Zaehler fuer ankommende AuditLog-PDUs
-		long counterAuditlog = 0;	
+	// Zaehler fuer ankommende AuditLog-PDUs
+	static long counterAuditlog = 0;	
+		
+	//Zaehler AuditLogType Login
+	static int counterLogin = 0;
+			
+	//Zaehler AuditLogType Logout
+	static int counterLogout = 0;
+			
+	//Zaehler AuditLogType Chat
+	static int counterChat = 0;
 	
-		//Zaehler AuditLogType Login
-		int counterLogin = 0;
-		
-		//Zaehler AuditLogType Logout
-		int counterLogout = 0;
-		
-		//Zaehler AuditLogType Chat
-		int counterChat = 0;
-		
+	
+	static void read(String fileName) {	
 
         File file = new File(fileName);
 
@@ -68,15 +69,10 @@ public class Administration {
                 	System.out.println("BufferedReader konnte nicht geschlossen werden");
                 }
         }
+        System.out.println("\nAuswertung");
         System.out.println("Anzahl der AuditLog-PDUs: " + counterAuditlog);
         System.out.println("Anzahl der Logins: " + counterLogin);
         System.out.println("Anzahl der Chat Nachrichten: " + counterChat);
         System.out.println("Anzahl der Logouts: " + counterLogout);
-    }
-	
-	
-	public static void main(String[] args) {
-        String fileName = "ChatAuditLog.txt";
-        ladeDatei(fileName);
     }
 }
