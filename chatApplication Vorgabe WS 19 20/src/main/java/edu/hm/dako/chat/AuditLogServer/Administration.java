@@ -7,7 +7,7 @@ import java.io.IOException;
 
 /**
  * 
- * Die Klasse wertet die ChatAuditLog.txt aus
+ * Die Klasse wertet die ChatAuditLog.dat aus
  * 
  * @author Armin Lewig
  *
@@ -27,6 +27,10 @@ public class Administration {
 	//Zaehler AuditLogType Chat
 	static int counterChat = 0;
 	
+	public static void main(String[] args) {
+		String fileName = "ChatAuditLog.dat";
+		Administration.read(fileName);	
+	}
 	
 	static void read(String fileName) {	
 
@@ -69,7 +73,7 @@ public class Administration {
                 	System.out.println("BufferedReader konnte nicht geschlossen werden");
                 }
         }
-        System.out.println("\nAuswertung");
+        System.out.println("Auswertung:");
         System.out.println("Anzahl der AuditLog-PDUs: " + counterAuditlog);
         System.out.println("Anzahl der Logins: " + counterLogin);
         System.out.println("Anzahl der Chat Nachrichten: " + counterChat);

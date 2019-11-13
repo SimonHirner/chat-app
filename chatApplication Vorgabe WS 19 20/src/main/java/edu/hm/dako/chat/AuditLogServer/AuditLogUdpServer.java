@@ -89,6 +89,6 @@ public class AuditLogUdpServer {
 			// Andere Fehler
 			System.out.println("Schwerwiegender Fehler");
 		}
-		
+				
 	}
 }
