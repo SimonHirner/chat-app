@@ -39,7 +39,7 @@ public class AuditLogTcpServer {
 	protected long counter = 0;
 	
 	// Maximale Wartezeit (ms) auf Nachricht vom ChatServer
-	static final int CONNECTION_WAITING_TIME = 100000;
+	static final int CONNECTION_WAITING_TIME = 150000;
 
 	public static void main(String[] args) {
 
