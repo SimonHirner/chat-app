@@ -76,7 +76,7 @@ public class AuditLogTcpServer {
             		bufferedWriter.write(receivedAuditLogPDU.toString());
             		bufferedWriter.flush();
             		//liest AuditLog Datei
-            		Administration.readAuditLog("ChatAuditLog.dat");
+            		AuditLogStatistic.readAuditLog("ChatAuditLog.dat");
             	} catch (EndOfFileException endOfFileException) {
             		//Verbindungsabbruch
             		System.out.println("Verbindungsabbruch");

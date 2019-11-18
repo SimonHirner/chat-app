@@ -1,6 +1,5 @@
 package edu.hm.dako.chat.AuditLogServer;
 
-import java.awt.Container;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -11,12 +10,12 @@ import javax.swing.JLabel;
 
 /**
  * 
- * Die Klasse wertet die ChatAuditLog.txt aus
- * 
+ * Die Klasse wertet die ChatAuditLog.txt aus und zeigt das Ergebnis in einem
+ * Fenster an
  *
  */
 
-public class Administration extends JFrame {
+public class AuditLogStatistic extends JFrame {
 
 	// Zaehler fuer ankommende AuditLog-PDUs
 	static long counterAuditlog;
@@ -34,6 +33,7 @@ public class Administration extends JFrame {
 	static JLabel logins;
 	static JLabel messages;
 	static JLabel logouts;
+	// gibt an, ob die GUI schon geöffnet ist
 	private static boolean isGuiOpen = false;
 
 	public static void main(String[] args) {
@@ -43,8 +43,8 @@ public class Administration extends JFrame {
 
 	// die Methode liest Zeile für Zeile die mitgegebene Datei
 	static void readAuditLog(String fileName) {
-		
-		//setzt Zaehler auf null
+
+		// setzt Zaehler auf null
 		counterAuditlog = 0;
 		counterLogin = 0;
 		counterLogout = 0;
@@ -52,32 +52,33 @@ public class Administration extends JFrame {
 
 		File file = new File(fileName);
 
-		// wenn die Datei nicht gelesen oder es kein File ist, wird hier geendet
+		// wenn die Datei nicht gelesen werden kann oder es kein File ist, wird hier
+		// beendet
 		if (!file.canRead() || !file.isFile())
 			System.exit(0);
 
-		BufferedReader in = null;
+		BufferedReader reader = null;
 		try {
-			in = new BufferedReader(new FileReader(fileName));
+			reader = new BufferedReader(new FileReader(fileName));
 			String line = null;
-			while ((line = in.readLine()) != null) {
+			while ((line = reader.readLine()) != null) {
 				// es wird ueberprueft, ob "AuditLogPdu" in der Zeile steht und der
-				// entsprechende Zaehler wird hochgezaehlt
+				// entsprechende Zaehler wird bei ja hochgezaehlt
 				if (line.contains("AuditLogPdu")) {
 					counterAuditlog++;
 				}
 				// es wird ueberprueft, ob "Login" in der Zeile steht und der entsprechende
-				// Zaehler wird hochgezaehlt
+				// Zaehler wird bei ja hochgezaehlt
 				if (line.contains("Login")) {
 					counterLogin++;
 				}
 				// es wird ueberprueft, ob "Chat" in der Zeile steht und der entsprechende
-				// Zaehler wird hochgezaehlt
+				// Zaehler wird bei ja hochgezaehlt
 				if (line.contains("Chat")) {
 					counterChat++;
 				}
 				// es wird ueberprueft, ob "Logout" in der Zeile steht und der entsprechende
-				// Zaehler wird hochgezaehlt
+				// Zaehler wird bei ja hochgezaehlt
 				if (line.contains("Logout")) {
 					counterLogout++;
 				}
@@ -86,19 +87,20 @@ public class Administration extends JFrame {
 			e.printStackTrace();
 		} finally {
 			// BufferedReader wird geschlossen
-			if (in != null)
+			if (reader != null)
 				try {
-					in.close();
+					reader.close();
 				} catch (IOException e) {
 					System.out.println("BufferedReader konnte nicht geschlossen werden");
 				}
 		}
-		gui();
+		statisticGui();
 	}
 
 	// zeigt in einem Fenster die Auswertung an
-	private static void gui() {
+	private static void statisticGui() {
 
+		// wenn das Fenster noch nicht geoeffnet ist, wird ein neues erstellt
 		if (!isGuiOpen) {
 			information = new JFrame("AuditLog Auswertung");
 
@@ -128,7 +130,7 @@ public class Administration extends JFrame {
 
 			isGuiOpen = true;
 		} else {
-			//aktualisiert den Text im Fenster
+			// ist das Fenster schon geoeffnet, wird der Text aktualisiert
 			auditLogPdus.setText("Anzahl der AuditLog-PDUs: " + counterAuditlog);
 			logins.setText("Anzahl der Logins: " + counterLogin);
 			messages.setText("Anzahl der Chat Nachrichten: " + counterChat);
