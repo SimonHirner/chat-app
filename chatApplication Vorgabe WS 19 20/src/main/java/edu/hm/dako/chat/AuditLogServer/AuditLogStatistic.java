@@ -17,6 +17,7 @@ import javax.swing.JLabel;
 
 public class AuditLogStatistic extends JFrame {
 
+	private static final long serialVersionUID = 2271636673918984337L;
 	// Zaehler fuer ankommende AuditLog-PDUs
 	static long counterAuditlog;
 	// Zaehler AuditLogType Login
@@ -28,20 +29,15 @@ public class AuditLogStatistic extends JFrame {
 
 	// GUI
 	static JFrame information;
-	// Text fÃ¼r die GUI
+	// Text für die GUI
 	static JLabel auditLogPdus;
 	static JLabel logins;
 	static JLabel messages;
 	static JLabel logouts;
-	// gibt an, ob die GUI schon geÃ¶ffnet ist
-	private static boolean isGuiOpen = false;
+	// gibt an, ob die GUI schon geöffnet ist
+	static boolean isGuiOpen = false;
 
-	public static void main(String[] args) {
-		String fileName = "ChatAuditLog.dat";
-		readAuditLog(fileName);
-	}
-
-	// die Methode liest Zeile fÃ¼r Zeile die mitgegebene Datei
+	// die Methode liest Zeile für Zeile die mitgegebene Datei
 	static void readAuditLog(String fileName) {
 
 		// setzt Zaehler auf null
@@ -54,8 +50,9 @@ public class AuditLogStatistic extends JFrame {
 
 		// wenn die Datei nicht gelesen werden kann oder es kein File ist, wird hier
 		// beendet
-		if (!file.canRead() || !file.isFile())
+		if (!file.canRead() || !file.isFile()) {
 			System.exit(0);
+		}
 
 		BufferedReader reader = null;
 		try {
@@ -98,19 +95,19 @@ public class AuditLogStatistic extends JFrame {
 	}
 
 	// zeigt in einem Fenster die Auswertung an
-	private static void statisticGui() {
+	static void statisticGui() {
 
 		// wenn das Fenster noch nicht geoeffnet ist, wird ein neues erstellt
 		if (!isGuiOpen) {
 			information = new JFrame("AuditLog Auswertung");
 
-			// setzt die Einstellungen fÃ¼r das Fenster
+			// setzt die Einstellungen für das Fenster
 			information.setLayout(null);
-			information.setVisible(true);
-			information.setSize(400, 400);
+			information.setVisible(false);
+			information.setSize(300, 200);
 			information.setResizable(false);
 			information.setLocationRelativeTo(null);
-			information.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			information.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
 			auditLogPdus = new JLabel("Anzahl der AuditLog-PDUs: " + counterAuditlog);
 			auditLogPdus.setBounds(5, -30, 400, 100);
