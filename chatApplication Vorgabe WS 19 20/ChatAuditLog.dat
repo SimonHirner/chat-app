@@ -1,0 +1,36 @@
+
+AuditLogPdu ****************************************************************************************************
+AuditLogType: Login 
+userName: sdf, 
+clientThreadName: Client-sdf
+serverThreadName: null
+auditTime: Thu Dec 12 09:58:35 CET 2019
+message: null
+**************************************************************************************************** SimplePdu
+
+AuditLogPdu ****************************************************************************************************
+AuditLogType: Chat  
+userName: sdf, 
+clientThreadName: Client-sdf
+serverThreadName: null
+auditTime: Thu Dec 12 09:58:37 CET 2019
+message: sdfa
+**************************************************************************************************** SimplePdu
+
+AuditLogPdu ****************************************************************************************************
+AuditLogType: Chat  
+userName: sdf, 
+clientThreadName: Client-sdf
+serverThreadName: null
+auditTime: Thu Dec 12 09:58:39 CET 2019
+message: adf
+**************************************************************************************************** SimplePdu
+
+AuditLogPdu ****************************************************************************************************
+AuditLogType: Logout
+userName: sdf, 
+clientThreadName: Client-sdf
+serverThreadName: null
+auditTime: Thu Dec 12 09:58:40 CET 2019
+message: null
+**************************************************************************************************** SimplePdu

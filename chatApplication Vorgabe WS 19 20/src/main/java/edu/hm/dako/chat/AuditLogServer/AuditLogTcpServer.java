@@ -94,9 +94,11 @@ public class AuditLogTcpServer implements AuditLogServerInterface {
         		try {                 
         			// Server Socket fuer AuditLogServer erzeugen
         			auditLogServerSocket = new TcpServerSocket(AUDIT_LOG_SERVER_PORT, DEFAULT_SENDBUFFER_SIZE, DEFAULT_RECEIVEBUFFER_SIZE);
+        			log.debug("Socket wurde geöffnet");
                     
         			// Verbindung mit ChatServer erzeugen und aufbauen
         			auditLogServerConnection = (TcpConnection) auditLogServerSocket.accept();
+        			log.debug("Neuer Verbindungsaufbauwunsch empfangen");
                         
         			// FileWriter erzeugen   
         			fileWriter = new FileWriter("ChatAuditLog.dat");
@@ -127,9 +129,11 @@ public class AuditLogTcpServer implements AuditLogServerInterface {
              
         		} catch (SocketException socketException) {			
         			// Socket geschlossen
+        			log.debug("Socket wurde geschlossen");
         		} catch (Exception exception) {
         			// Andere Exceptions behandeln
         			System.out.println("Schwerwiegender Fehler");
+        			log.error("Fehler beim Starten");
         		}
         		return null;
         	}     
@@ -160,9 +164,11 @@ public class AuditLogTcpServer implements AuditLogServerInterface {
             if(auditLogServerConnection != null) {
             	auditLogServerConnection.close();
             }
+            log.debug("Verbindung wurde beendet");
             
             // Socket schliessen
             auditLogServerSocket.close();
+            log.debug("Socket wurde geschlossen");
             
             // Thread beenden
             Thread.currentThread().interrupt();
@@ -171,6 +177,7 @@ public class AuditLogTcpServer implements AuditLogServerInterface {
         } catch (Exception exception) {
                 // Fehler beim Beenden
                 System.out.println("AuditLogServer konnte nicht ordnungsgemaess beendet werden.");
+                log.error("Fehler beim Stoppen");
         }
     }
 }
