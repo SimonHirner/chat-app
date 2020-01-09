@@ -2,8 +2,8 @@
 <class-diagram version="1.2.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="edu.hm.dako.chat.connection.DecoratingConnectionFactory" 
-    project="chatApplication Vorgabe WS 19 20" 
-    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/connection/DecoratingConnectionFactory.java" 
+    project="chatApplication FINAL WS 19 20" 
+    file="/chatApplication FINAL WS 19 20/src/main/java/edu/hm/dako/chat/connection/DecoratingConnectionFactory.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="268" x="175" y="138"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -13,8 +13,8 @@
     </display>  
   </class>  
   <class id="2" language="java" name="edu.hm.dako.chat.connection.LoggingConnectionDecorator" 
-    project="chatApplication Vorgabe WS 19 20" 
-    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/connection/LoggingConnectionDecorator.java" 
+    project="chatApplication FINAL WS 19 20" 
+    file="/chatApplication FINAL WS 19 20/src/main/java/edu/hm/dako/chat/connection/LoggingConnectionDecorator.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="677" y="159"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -24,8 +24,8 @@
     </display>  
   </class>  
   <interface id="3" language="java" name="edu.hm.dako.chat.connection.Connection" 
-    project="chatApplication Vorgabe WS 19 20" 
-    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/connection/Connection.java" binary="false" 
+    project="chatApplication FINAL WS 19 20" 
+    file="/chatApplication FINAL WS 19 20/src/main/java/edu/hm/dako/chat/connection/Connection.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="655" y="420"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -35,8 +35,8 @@
     </display>  
   </interface>  
   <interface id="4" language="java" name="edu.hm.dako.chat.connection.ConnectionFactory" 
-    project="chatApplication Vorgabe WS 19 20" 
-    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/connection/ConnectionFactory.java" 
+    project="chatApplication FINAL WS 19 20" 
+    file="/chatApplication FINAL WS 19 20/src/main/java/edu/hm/dako/chat/connection/ConnectionFactory.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="81" width="258" x="175" y="349"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -46,11 +46,15 @@
     </display>  
   </interface>  
   <association id="5">    
-    <end type="SOURCE" refId="2" navigable="false" variant="ASSOCIATION">      
-      <attribute id="6" name="wrappedConnection"/>      
-      <multiplicity id="7" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="6" name="wrappedConnection">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="7" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true" variant="ASSOCIATION"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <realization id="8">    
@@ -58,11 +62,15 @@
     <end type="TARGET" refId="4"/>  
   </realization>  
   <association id="9">    
-    <end type="SOURCE" refId="1" navigable="false" variant="ASSOCIATION">      
-      <attribute id="10" name="wrappedFactory"/>      
-      <multiplicity id="11" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="10" name="wrappedFactory">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="11" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true" variant="ASSOCIATION"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <realization id="12">    

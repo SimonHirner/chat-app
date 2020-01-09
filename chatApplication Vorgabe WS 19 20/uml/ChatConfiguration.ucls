@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="edu.hm.dako.chat.common.ChatPDU" project="chatApplication Vorgabe WS 19 20" 
-    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/common/ChatPDU.java" binary="false" 
+  <class id="1" language="java" name="edu.hm.dako.chat.common.ChatPDU" project="chatApplication FINAL WS 19 20" 
+    file="/chatApplication FINAL WS 19 20/src/main/java/edu/hm/dako/chat/common/ChatPDU.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="1376" width="632" x="444" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -12,8 +12,8 @@
     </display>  
   </class>  
   <enumeration id="2" language="java" name="edu.hm.dako.chat.common.ClientConversationStatus" 
-    project="chatApplication Vorgabe WS 19 20" 
-    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/common/ClientConversationStatus.java" 
+    project="chatApplication FINAL WS 19 20" 
+    file="/chatApplication FINAL WS 19 20/src/main/java/edu/hm/dako/chat/common/ClientConversationStatus.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="441" y="1564"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -22,9 +22,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="3" language="java" name="edu.hm.dako.chat.common.ClientListEntry" 
-    project="chatApplication Vorgabe WS 19 20" 
-    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/common/ClientListEntry.java" binary="false" 
+  <class id="3" language="java" name="edu.hm.dako.chat.common.ClientListEntry" project="chatApplication FINAL WS 19 20" 
+    file="/chatApplication FINAL WS 19 20/src/main/java/edu/hm/dako/chat/common/ClientListEntry.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="956" width="362" x="42" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -33,8 +32,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="4" language="java" name="edu.hm.dako.chat.common.PduType" project="chatApplication Vorgabe WS 19 20" 
-    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/common/PduType.java" binary="false" 
+  <enumeration id="4" language="java" name="edu.hm.dako.chat.common.PduType" project="chatApplication FINAL WS 19 20" 
+    file="/chatApplication FINAL WS 19 20/src/main/java/edu/hm/dako/chat/common/PduType.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="476" width="369" x="655" y="1453"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -44,8 +43,8 @@
     </display>  
   </enumeration>  
   <interface id="5" language="java" name="edu.hm.dako.chat.connection.Connection" 
-    project="chatApplication Vorgabe WS 19 20" 
-    file="/chatApplication Vorgabe WS 19 20/src/main/java/edu/hm/dako/chat/connection/Connection.java" binary="false" 
+    project="chatApplication FINAL WS 19 20" 
+    file="/chatApplication FINAL WS 19 20/src/main/java/edu/hm/dako/chat/connection/Connection.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="156" width="196" x="42" y="1453"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -79,27 +78,27 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="12">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="13" name="clientStatus">        
-        <position height="19" width="71" x="354" y="1458"/>      
-      </attribute>      
-      <multiplicity id="14" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-5" y="23"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="15">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="16" name="con">        
+      <attribute id="13" name="con">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="17" minimum="0" maximum="1">        
+      <multiplicity id="14" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="15">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="16" name="clientStatus">        
+        <position height="19" width="71" x="354" y="1458"/>      
+      </attribute>      
+      <multiplicity id="17" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-5" y="23"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
