@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="edu.hm.dako.chat.tcp.TcpConnectionFactory" 
+    project="chatApplication FINAL WS 19 20" 
+    file="/chatApplication FINAL WS 19 20/src/main/java/edu/hm/dako/chat/tcp/TcpConnectionFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="258" x="143" y="114"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="edu.hm.dako.chat.tcp.TcpServerSocket" project="chatApplication FINAL WS 19 20" 
+    file="/chatApplication FINAL WS 19 20/src/main/java/edu/hm/dako/chat/tcp/TcpServerSocket.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="163" x="441" y="114"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="edu.hm.dako.chat.tcp.TcpConnection" project="chatApplication FINAL WS 19 20" 
+    file="/chatApplication FINAL WS 19 20/src/main/java/edu/hm/dako/chat/tcp/TcpConnection.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="248" x="644" y="114"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
